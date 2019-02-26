@@ -5,11 +5,11 @@ var myModule = require('./modular.js');
 var dirName = process.argv[2];
 
 //filter
-var extensionTxt = process.arg[3];
+var extensionTxt = process.argv[3];
 
 //1. three arguments, directory name, filename extension, and callback function
 
-myModule(dirName, extensiontxt, function(err, list)
+myModule(dirName, extensionTxt, function(err, list)
 {
     //2. error check
     if (err) {

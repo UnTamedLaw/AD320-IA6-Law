@@ -11,7 +11,7 @@ module.exports = function(dirName, extensionTxt, callback)
             return callback(err);
         }
         list = list.filter(function (contractFile) {
-            return path.extname(contractFile) ===extensionTxt
+            return path.extname(contractFile) === "." + extensionTxt;
         })
         
         callback(null, list);
