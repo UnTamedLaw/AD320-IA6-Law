@@ -10,8 +10,8 @@ module.exports = function(dirName, extensionTxt, callback)
         if (err) {
             return callback(err);
         }
-        list = list.filter(function (file) {
-            return path.extname(file) ===extensionTxt
+        list = list.filter(function (contractFile) {
+            return path.extname(contractFile) ===extensionTxt
         })
         
         callback(null, list);

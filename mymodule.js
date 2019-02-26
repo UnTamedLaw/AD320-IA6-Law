@@ -18,7 +18,7 @@ myModule(dirName, extensiontxt, function(err, list)
     //3. don't change anything else
     //4. handle all errors that may occur
     list.forEach(function(contractFile) {
-        console.log(file);
+        console.log(contractFile);
                 
 })
   
