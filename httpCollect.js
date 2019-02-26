@@ -2,7 +2,7 @@
 const bl = require('bl');
 const http = require('http');
 
-const url = process.argv[2].toString();
+var url = process.argv[2];
 
 //use  http get, sets method to GET and calls req.end() automatically (only difference between http.request())
 http.get(url, function (res) {
@@ -11,13 +11,13 @@ http.get(url, function (res) {
         {
             //standard error message
             if(err){
-            return console.error(err);
+            return console.error(err("error"));
             }      
         //Convert buffer to string.
         data = data.toString();
         // first line should be an integer representing the # of characters
         console.log(data.length);
         // second line contains the complete String of characters
-        console.log(data.data);
+        console.log(data);
         }))
 });
